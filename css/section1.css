@@ -225,105 +225,176 @@ input[type=text]:focus, input[type=password]:focus {
   opacity: 1;
 }
   
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900,700);
-html {
-  font-size: 16px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-h3 {
-  font-family: 'Lato', sans-serif;
-  font-size: 2.125rem;
-  font-weight: 700;
-  color: #444;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 55px 0 35px;
+
+.container1 {
+  max-width: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.5s;
 }
 
-a {
-  color: #ddd;
-  text-transform: capitalize;
-  font-size: 24px;
+.container1 :hover .card {
+  filter: blur(5px);
+  transform: scale(.7);
 }
-a:hover {
-  color: #ccc;
+
+.container1 .card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.container1 .card:hover {
+  filter: blur(0px);
+  transform: scale(1);
+}
+
+.container1 .card:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.container1 .card:hover:before {
+  background: #000;
+  transform: scaleY(1.15);
+  box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+.container1 .card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+  background: rgba(255,255,255,.1);
+  z-index: 1;
+}
+
+.container1 .card:hover:after {
+  transform: scaleY(1.15);
+}
+
+.container1 .card:hover {
+  z-index: 1;
+}
+
+.container1 .card .content {
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+  transition: 0.5s;
+}
+
+.container1 .card:hover .content {
+  color: #fff;
+}
+
+.container1 .card .content h2 {
+  font-size: 3em;
+}
+
+.container1 .card .content p {
+  font-size: 0.9em;
+}
+
+.container1 .card .content a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 10px;
+  background: #262626;
+  color: #fff;
   text-decoration: none;
 }
-
-.carousel-inner {
-  margin: auto;
-  width: 90%;
+.container1 .card:hover .content a {
+  background: #2196F3;
 }
 
-.carousel-control {
-  width: 4%;
+
+
+
+i.fa {
+	font-size: 30px;
+	margin-bottom: 10px;
 }
 
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
+
+
+.counter-desc {
+	font-size: 16px;
+	opacity: 0.7;
 }
 
-.glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
-  margin-top: -10px;
-  margin-left: -10px;
-  color: #444;
+/* Layout: */
+
+.col-main {
+  flex: 1;  
+}
+.new1{
+  padding-top: 70px;
+}  
+
+.col-complementary {
+  flex: 1;  
+ 
+ 
 }
 
-.carousel-inner a {
-  display: table-cell;
-  height: 180px;
-  width: 200px;
-  vertical-align: middle;
-}
-.carousel-inner img {
-  max-height: 150px;
-  margin: auto auto;
-  max-width: 100%;
-}
+/* Responsive: */
 
-@media (max-width: 767px) {
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+@media only screen and (min-width: 640px) {
+  .layout {
+    display: flex;
   }
 }
-@media (min-width: 767px) and (max-width: 992px) {
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(50%, 0, 0);
-    transform: translate3d(50%, 0, 0);
-  }
 
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
-  }
+/* etc */
+
+
+
+.container2 {
+  max-width: auto;
+  max-height: auto;
+  background: #0074f8;
+
 }
-@media (min-width: 992px) {
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(16.7%, 0, 0);
-    transform: translate3d(16.7%, 0, 0);
-  }
 
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-16.7%, 0, 0);
-    transform: translate3d(-16.7%, 0, 0);
-  }
+.col2 {
+  padding: 1em;
+background: #0074f8;
+}
+
+
+.icon {
+  font-size: 40px;
+  color: #00e1ed;
+  float: center;
+  position: relative;
+  left: 70px;
+}
+
+.content {
+  margin-top: 0px;
+  margin-left: 60px;
+  color: white;
 }
