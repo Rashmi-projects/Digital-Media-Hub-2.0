@@ -1,8 +1,8 @@
 $(function(){
-$('#header').load('/header.html');
+$('#header').load('header.html');
 });
 
 
 $(function(){
-    $('#footer').load('/footer.html');
+    $('#footer').load('footer.html');
     });
